@@ -1,4 +1,5 @@
-nclude "main.h"
+#include <unistd.h>
+#include "main.h"
 /**
  *  main - Prints _putchar task 0
  * Return: Always 0 (success) 
