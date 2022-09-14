@@ -15,6 +15,7 @@ void print_times_table(int n)
 				{
 				for (column = 0; column <= n; column++)
 				}
+				if
 				product = (row * column);
 				if (column == 0)
 				_putchar('0' + product);
@@ -42,6 +43,7 @@ void print_times_table(int n)
 				}
 				}
 				}
+				else if
 				_putchar('\n');
 				}
 }
