@@ -1,49 +1,51 @@
 #include "main.h"
+
 /**
- * print_times_table - prints the n times table
- * @n: the upper limit to be printed
- */
+* print_times_table - Prints a multiplication table up to param
+* @n: The number to be treated
+*
+* Return: Number matrix
+*/
 void print_times_table(int n)
 {
-		int row;
-			int column;
-				int product;
+		int x, y, z;
 
-				if (n < 0 || n >= 15)
-				return;
-				for (row = 0; row <= n; row++)
-				{
-				for (column = 0; column <= n; column++)
-				}
-				if
-				product = (row * column);
-				if (column == 0)
-				_putchar('0' + product);
-				else
-				{
-				_putchar(',');
-				_putchar(' ');
-				if (product <= 9)
-				{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + product);
-				}
-				else if (product > 9 && product < 100)
-				{
-				_putchar(' ');
-				_putchar('0' + (product / 10));
-				_putchar('0' + (product % 10));
-				}
-				else if (product >= 100)
-				{
-				_putchar('0' + (product / 100));
-				_putchar('0' + ((product / 10) % 10));
-				_putchar('0' + (product % 10));
-				}
-				}
-				}
-				else if
-				_putchar('\n');
-				}
+			if (n >= 0 && n <= 14)
+					{
+								for (x = 0; x <= n; x++)
+											{
+															for (y = 0; y <= n; y++)
+																			{
+																								z = x * y;
+																												if (z > 99)
+																																	{
+																																							_putchar(',');
+																																												_putchar(32);
+																																																	_putchar((z / 100) + '0');
+																																																						_putchar(((z / 10) % 10) + '0');
+																																																											_putchar((z % 10) + '0');
+																																																															}
+																																else if (z > 9)
+																																					{
+																																											_putchar(',');
+																																																_putchar(32);
+																																																					_putchar(32);
+																																																										_putchar(((z / 10) % 10) + '0');
+																																																															_putchar((z % 10) + '0');
+																																																																			}
+																																				else
+																																									{
+																																															if (y != 0)
+																																																					{
+																																																												_putchar(',');
+																																																																		_putchar(32);
+																																																																								_putchar(32);
+																																																																														_putchar(32);
+																																																																																			}
+																																																				_putchar(z + '0');
+																																																								}
+																																							}
+																		_putchar('\n');
+																				}
+									}
 }
