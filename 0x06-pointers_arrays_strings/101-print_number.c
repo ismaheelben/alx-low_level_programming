@@ -3,7 +3,7 @@
 /**
  * print_number - prints an integertask9;
  * @n: integer to be printed;
- * Return; Always (0)
+ * Return; Always (success)
  */
 void print_number(int n)
 {
