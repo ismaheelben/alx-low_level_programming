@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strncat  concatenates n bytes from a string to anothertask1
+ * _strncat-concatenates n bytes from a string to anothertask1
  * @dest: destination string
  * @src: source string
  * @n: number of bytes of str to concatenate
