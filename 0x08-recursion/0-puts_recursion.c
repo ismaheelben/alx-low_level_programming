@@ -1,14 +1,22 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print and check
- * ismaila
- * Return: On success (1) on error return (-1)
+ * puts_recursion - prints's a string followed by a new line
+ * @s: check string to be printed
+ * aautho ismail
+ *
+ * Return (void)
  */
-
-int _putchar(char c)
+void _puts_recursion(char *s)
 {
-	return (write(1, &c, 1));
-
+	if (*s == '\0')
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar(s[0]);
+		_putchar_recursion(s + 1);
+	}
 }
+
