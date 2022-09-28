@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_recursion - prints's a string followed by a new line
+ * _puts_recursion - prints's a string followed by a new line
  * @s: check string to be printed
  * aautho ismail
  *
@@ -16,7 +16,7 @@ void _puts_recursion(char *s)
 	else
 	{
 		_putchar(s[0]);
-		_putchar_recursion(s + 1);
+		_puts_recursion(s + 1);
 	}
 }
 
