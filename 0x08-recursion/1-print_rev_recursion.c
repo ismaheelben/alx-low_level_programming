@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion print reverse string
+ * _print_rev_recursion - print reverse string
  * @s: string to check and print
  * author ismaheel
+ *
  * Return: (void)
  */
 _print_rev_recursion(char *s)
