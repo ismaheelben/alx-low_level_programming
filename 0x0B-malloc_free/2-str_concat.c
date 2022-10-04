@@ -1,42 +1,44 @@
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings
- *
- * @s1: A string to be concatenated
- *
- * @s2: A string to be concatenated
- *
- * Return: pointer to newly allocated memory
- * which is equal to @s1 + s2 (SUCCESS) OR
- * NULL (FAILURE)
+ * str_concat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * ism
+ * Return: pointer of an array of chars
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int s1_length = 0;
-	unsigned int s2_length = 0;
-	char *alloc_mem;
-	unsigned int i, j;
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	while (*(s1 + s1_length) != '\0')
-		s1_length++;
-	while (*(s2 + s2_length) != '\0')
-		s2_length++;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
 
-	alloc_mem = malloc(1 + (s1_length * sizeof(*s1)) + (s2_length * sizeof(*s2)));
-	if (alloc_mem == NULL)
-		return ('\0');
+	for (j = 0; s2[j] != '\0'; j++)
+		;
 
-	for (i = 0; i < s1_length; i++)
-		alloc_mem[i] = *(s1 + i);
-	for (j = 0; j < s2_length; j++, i++)
-		alloc_mem[i] = **(s2 + j);
-	return (alloc_mem);
+	strout = malloc(sizeof(char) * (i + j + 1));
+
+	if (strout == NULL)
+	{
+		free(strout);
+		return (NULL);
+	}
+
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
+
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+
+	return (strout);
 }
-
