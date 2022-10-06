@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_check - allocates memory using malloc
+ * malloc_checked - allocates memory using malloc
  * @b: memory allocation
  * author ism
  * Return: pointer to allocate memory of at error terminate process
